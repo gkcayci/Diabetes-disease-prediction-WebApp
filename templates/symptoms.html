@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Symptoms</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{{ url_for('static',filename = 'diabetes.ico') }}" type="image/icon type">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.typekit.net/txt6qtg.css">
+        <style>
+        .font_heading
+        {
+          font-family: raleway,sans-serif;
+            font-style: normal;
+            color: #00d4ff;
+        }
+        .text
+        {
+            color: white;
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button_padding
+        {
+          min-width: 150px;
+        }
+        .padding{
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+        .font_body{
+            font-weight: 450;
+            font-family: sans-serif;
+            font-size: 20px;
+            text-align: left;
+            color: black;
+        }
+      </style>
+    </head>
+<body>
+
+ <nav class="font_heading navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #011627;">
+            <a class="font navbar-brand col-sm-8" href="/home">Diabetes Detection</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="/about_diabetes">About Diabetes</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/symptoms">Symptoms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index">Test</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bmi">BMI</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row">
+          <div class="col-lg-12" style="padding-top: 120px; text-align: center;">
+              <h1 class="font_heading" style="color: #090979;"><b>Symptoms</b></h1>
+                <br>
+                <br>
+          </div>
+          <div class="row padding font_body" style="text-align: left;margin-bottom: 50px; padding-left: 200px; padding-right: 100px">
+               <img width="1100" height="500"  style="border-radius: 50px;" src="{{ url_for('static',filename = 'Symptoms of diabetes.jpg') }}" alt="Symptoms"><br>
+        </div>
+          <div class="row padding">
+            <div class="font_heading" >
+             <p style="font-size: 23px">1.Age</p>
+                <div class="row padding font_body" >
+                    <p>
+                      Scientists concluded that persons diagnosed with diabetes between
+                      the ages of 30 and 65 years had worse glycaemic control than those diagnosed at 65 years of age or older.
+                    </p>
+                </div>
+            </div>
+            </div>
+            </div>
+         <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">2.Gender</p>
+                <div class="row padding font_body" >
+                    <p>
+                     Diabetes is more common in men (2.3%) than women (1.4%)
+                    </p>
+                </div>
+            </div>
+            </div>
+
+
+          <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">3.Polyuria</p>
+                <div class="row padding font_body" >
+                    <p>
+                        Polyuria is often one of the first signs of diabetes. The condition makes sugar build up in your bloodstream.
+                        If your kidneys aren’t able to filter it out, it exits your body in your urine.
+                        As the extra sugar and fluids travel through your kidneys, you have to pee more.
+                        Plus, the more you go, the thirstier you feel, and the more you’ll drink.
+                    </p>
+                </div>
+            </div>
+            </div>
+
+           <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">4.Polydipsia</p>
+                <div class="row padding font_body" >
+                    <p>
+                        Polydipsia is the term given to excessive thirst and is one of the initial symptoms of diabetes.
+                        It is also usually accompanied by temporary or prolonged dryness of the mouth.If you feel thirsty all the time or your thirst is stronger than usual and continues even after you drink,
+                        it can be a sign that not all is well inside your body.
+                    </p>
+                </div>
+            </div>
+            </div>
+           <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">5.Sudden weight loss</p>
+                <div class="row padding font_body" >
+                    <p>
+                       In people with diabetes, insufficient insulin prevents the body from getting glucose from the blood into the body’s cells to use as energy.
+                        When this occurs, the body starts burning fat and muscle for energy, causing a reduction in overall body weight.
+                        Unexpected weight loss is often noticed in people prior to a diagnosis of type 1 diabetes but it may also affect people with type 2 diabetes.
+                    </p>
+                </div>
+            </div>
+            </div>
+
+         <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">6.Weakness</p>
+                <div class="row padding font_body" >
+                    <p>
+                   If the cells do not take in enough glucose, it can build up in the blood. The cells need glucose to provide energy.
+                   Fatigue and weakness might result when the cells do not get enough glucose.
+                   Diabetes medications, such as insulin or metformin, help more of this sugar to move into the cells and prevent it from building to harmful levels in the blood.
+                    </p>
+                </div>
+            </div>
+            </div>
+          <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">7.Polyphagia</p>
+                <div class="row padding font_body" >
+                    <p>
+                        Polyphagia is the medical term used to describe excessive hunger or increased appetite and is one of the 3 main signs of diabetes.
+                        An increase in hunger is usually a response to normal things such as intensive exercise or other strenuous activity,
+                        but polyphagia can also be the result of more severe issues such as depression or stress.
+                    </p>
+                </div>
+            </div>
+            </div>
+               <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">8.Genital thrush</p>
+                <div class="row padding font_body" >
+                    <p>
+                        Thrush is a common problem and particularly for people with diabetes.
+                        Higher levels of glucose in the blood make candida all the more likely,
+                        so diabetics who have difficulty controlling their blood sugar may find themselves particularly prone to yeast infections.
+                    </p>
+                </div>
+            </div>
+            </div>
+             <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">9.Visual blurring</p>
+                <div class="row padding font_body" >
+                    <p>
+                        High blood sugar causes the lens of the eye to swell, which changes your ability to see.
+                        To correct this kind of blurred vision, you need to get your blood sugar back into the target range.
+                    </p>
+                </div>
+            </div>
+            </div>
+              <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">10.Itching</p>
+                <div class="row padding font_body" >
+                    <p>
+                        Localized itching is often caused by diabetes. It can be caused by a yeast infection, dry skin, or poor circulation.
+                        When poor circulation is the cause of itching, the itchiest areas may be the lower parts of the legs.
+                    </p>
+                </div>
+            </div>
+            </div>
+           <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">11.Irritability</p>
+                <div class="row padding font_body" >
+                    <p>
+                        Changes in blood sugar level can affect a person’s mood and mental status.
+                        When blood sugar returns to a normal range, these symptoms often resolve.
+                        Fluctuations in blood glucose can result in rapid mood changes, including low mood and irritability.
+                    </p>
+                </div>
+            </div>
+            </div>
+           <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">12.Delayed healing</p>
+                <div class="row padding font_body" >
+                    <p>
+                        People with uncontrolled diabetes may develop poor circulation.
+                        As circulation slows down, blood moves more slowly,
+                        which makes it more difficult for the body to deliver nutrients to wounds.
+                        As a result, the injuries heal slowly, or may not heal at all.
+                    </p>
+                </div>
+            </div>
+            </div>
+         <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">13.Partial Paresis</p>
+                <div class="row padding font_body" >
+                    <p>
+                      Also called focal neuropathies, these are more common in people with diabetes and involve damage to a single nerve.
+                      It may affect the shoulder, hand, leg, feet or face and may be caused by pressure on a nerve.
+                      This can cause weakness, pain, numbness or even paralysis.
+                    </p>
+                </div>
+            </div>
+            </div>
+          <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">14.Muscle Stiffness</p>
+                <div class="row padding font_body" >
+                    <p>
+                   Symptoms of diabetes-related musculoskeletal problems include muscle pain,
+                   joint pain or stiffness, lessened ability to move your joints, joint swelling,
+                   deformities, and a “pins and needles” sensation in the arms or legs.
+                   Some musculoskeletal problems are unique to diabetes.
+                    </p>
+                </div>
+            </div>
+            </div>
+             <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">15.Alopecia</p>
+                <div class="row padding font_body" >
+                    <p>
+                      People with diabetes are more likely to have a condition called alopecia areata.
+                      With alopecia, the immune system attacks the hair follicles, leading to patches of hair loss on the head and on other parts of the body.
+                      Diabetes itself can lead to hair loss.
+                    </p>
+                </div>
+            </div>
+            </div>
+               <div class="row padding">
+            <div class="font_heading" >
+                <p style="font-size: 23px">16.Obesity</p>
+                <div class="row padding font_body" >
+                    <p>
+                    According to scientists, the rapid increase of obesity will result in type 2 diabetes,
+                    heart disease and cancer cases.
+                    </p>
+                </div>
+            </div>
+            </div>
+</body>
+
+</html>

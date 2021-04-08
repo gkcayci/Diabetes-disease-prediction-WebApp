@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+ <head>
+   <title>Test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{{ url_for('static',filename = 'diabetes.ico') }}" type="image/icon type">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.typekit.net/txt6qtg.css">
+        <style>
+  html{
+	height: 100%;
+	margin: 0;
+}
+   @media only screen and (min-width: 1080px) {
+            .nav_space {
+                margin-left: 55%;
+            }
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Website Title */
+.container{
+    padding: 30px;
+	position: relative;
+	background-size: 500% 500%;
+}
+@keyframes change-gradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+
+.container-heading{
+    margin: 0;
+}
+.font_heading
+{
+font-family: raleway,sans-serif;
+font-style: normal;
+font-weight: 400;
+color: #00d4ff;
+}
+
+
+
+.description p{
+	color: #020024;
+    font-style: italic;
+    font-size: 14px;
+    margin: -5px 0 0;
+}
+
+/* Text Area */
+.ml-container{
+    margin: 30px 0;
+	flex: 1 0 auto;
+}
+
+
+.form-input {
+	text-align: center;
+	width: 350px;
+	height: 25px;
+	margin-bottom: 10px;
+}
+
+.Gender{
+	text-align: left;
+	width: 50px;
+	height: 25px;
+	margin-bottom: 5px;
+}
+
+.feature{
+	text-align: left;
+	width: 50px;
+	height: 25px;
+	margin-bottom: 5px;
+}
+
+/* Predict Button */
+.my-cta-button{
+	background: #ffffff;
+   	border: 2px solid #000000;
+    border-radius: 1000px;
+    box-shadow: 3px 3px #8c8c8c;
+	margin-top: 10px;
+    padding: 10px 36px;
+    color: #000000;
+    display: inline-block;
+   	font: italic bold 20px/1 "Calibri", sans-serif;
+    text-align: center;
+}
+
+.my-cta-button:hover{
+    color: #ffffff;
+    border: 2px solid #4d089a;
+}
+
+.my-cta-button:active{
+    box-shadow: 0 0;
+}
+
+    </style>
+</head>
+
+    <body>
+      <nav class="font_heading navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #011627;">
+        <a class="font navbar-brand col-sm-8" style=" text-align:left;" href="/home">Diabetes Detection</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="/about_diabetes">About Diabetes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/symptoms">Symptoms</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/index">Test</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="/bmi">BMI</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+        <!-- Website Title -->
+        <div class="row">
+          <div class="col-lg-12" style="padding-top: 120px; text-align: center; ">
+              <h1 class="font_heading" style="color: #00d4ff; padding-top: 7px; padding-bottom: 7px; margin-right: 7%; margin-left: 7%;"><b>Answer questions below following instructions in every cell</b></h1>
+                <br>
+          </div>
+      </div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+
+                <input class="form-input" type="text" name="Age" placeholder="Write Your Age"><br>
+                <input class="form-input" type="text" name="Gender" placeholder="Write your Gender Male=1, Female=0"><br>
+                <input class="form-input" type="text" name="Polyuria" placeholder="Do you have Polyuria? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Polydipsia" placeholder="Do you have Polydipsia?  Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Sudden_weight_loss" placeholder="Have You Had Sudden Weight loss? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Weakness" placeholder="Do you have a Weakness? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Polyphagia" placeholder="Do you have Polyphagia? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Genital_thrush" placeholder="Do you have Genital Thrush? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Visual_blurring" placeholder="Do you have Visual Blurring? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Itching" placeholder="Do you have Itching? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Irritability" placeholder="Do you feel Irritability? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Delayed_healing" placeholder="Do you have Delayed Healing? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Partial_paresis" placeholder="Do you have Partial Paresis? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Muscle_stiffness" placeholder="Do you have Muscle Stiffness? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Alopecia" placeholder="Do you have Alopecia? Yes=1, No=0"><br>
+                <input class="form-input" type="text" name="Obesity" placeholder="Have you been Obese? Yes=1, No=0"><br>
+
+
+        		<input type="submit" class="my-cta-button" value="Predict"><br>
+
+        	</form>
+    	</div>
+
+
+</div>
+    </body>
+</html>
+
+
